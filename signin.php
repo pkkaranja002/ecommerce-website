@@ -58,8 +58,8 @@ input {
 }
 
 .login-form {
-  //background: #222;
-  //box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  background: transparent;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
   min-height: 10rem;
   margin: auto;
   max-width: 50%;
@@ -165,16 +165,19 @@ input {
  	</style>
  </head>
  <body>
- <form class="login-form">
+
+ <form class="login-form" action="authentification/access.php" method="POST">
   <p class="login-text">
     <span class="fa-stack fa-lg">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-lock fa-stack-1x"></i>
     </span>
   </p>
-  <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" />
-  <input type="password" class="login-password" required="true" placeholder="Password" />
-  <input type="submit" name="Login" value="Login" class="login-submit" />
+  <input type="text" name="emailLog" id="emailLog" class="form-control" placeholder="Enter Email" class="login-username" autofocus="true" required="true" placeholder="Email" />
+
+  <input type="password" name="passLog" id="passLog" class="form-control" placeholder="Enter password" class="login-password" required="true" placeholder="Password" />
+
+  <input type="submit" name="login" id="login" value="Login" class="login-submit" />
 </form>
 <a href="#" class="login-forgot-pass">forgot password?</a>
 <div class="underlay-photo"></div>
